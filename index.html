@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Omar Alm Portfolio with HTML, Tailwind CSS, and JavaScript"
+    />
+    <title>Omar Alm | Portfolio</title>
+  </head>
+
+  <body class="min-h-screen bg-[#111111] text-white">
+    <!-- Navbar -->
+    <header
+      class="fixed top-0 left-0 z-50 w-full flex items-center justify-between gap-3 border-b border-white/10 bg-[#111111] px-4 py-3 sm:px-6 lg:px-10"
+    >
+      <!-- Logo -->
+      <a
+        href="#home"
+        class="shrink-0 transition-transform duration-300 hover:scale-105"
+      >
+        <img
+          src="/src/assets/icon/logo.svg"
+          alt="OMAR ALM Logo"
+          class="size-10 sm:size-12"
+        />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:block">
+        <ul
+          class="flex items-center gap-5 text-sm text-slate-300 lg:gap-9 lg:text-base"
+        >
+          <li>
+            <a
+              href="#home"
+              class="border-b-2 border-transparent py-2 transition-colors duration-300 hover:border-amber-200 hover:text-amber-200"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="border-b-2 border-transparent py-2 transition-colors duration-300 hover:border-amber-200 hover:text-amber-200"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skill"
+              class="border-b-2 border-transparent py-2 transition-colors duration-300 hover:border-amber-200 hover:text-amber-200"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#project"
+              class="border-b-2 border-transparent py-2 transition-colors duration-300 hover:border-amber-200 hover:text-amber-200"
+              >Projects</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Actions -->
+      <div class="flex shrink-0 items-center gap-3">
+        <a
+          href="#contact"
+          class="inline-flex items-center justify-center gap-2 rounded-full border border-white/70 bg-transparent px-5 py-2.5 text-sm font-semibold text-slate-200 transition-all duration-300 hover:border-sky-300 hover:bg-sky-300/10 hover:text-sky-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-300 sm:px-6 sm:text-base"
+        >
+          Contact
+        </a>
+        <!-- Mobile Menu Button -->
+        <button
+          id="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          class="flex size-10 items-center justify-center rounded-lg border border-white/20 transition-colors duration-300 hover:bg-white/10 md:hidden"
+        >
+          <img src="/src/assets/icon/menu.svg" alt="" class="size-6" />
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <nav
+      id="mobile-menu"
+      aria-label="Mobile navigation"
+      class="fixed right-0 top-0 z-50 hidden h-screen w-64 max-w-[85vw] border-l border-white/10 bg-[#171717] px-5 py-8 shadow-2xl md:hidden"
+    >
+      <button
+        id="menu-close"
+        type="button"
+        aria-label="Close navigation menu"
+        class="mb-8 ml-auto flex size-10 items-center justify-center rounded-lg transition-colors duration-300 hover:bg-white/10"
+      >
+        <img src="/src/assets/icon/close.svg" alt="" class="size-6" />
+      </button>
+
+      <ul class="flex flex-col gap-3 text-slate-300">
+        <li>
+          <a
+            href="#home"
+            class="block rounded-lg px-4 py-3 transition-colors hover:bg-amber-200/10 hover:text-amber-200"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#about"
+            class="block rounded-lg px-4 py-3 transition-colors hover:bg-amber-200/10 hover:text-amber-200"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="#skill"
+            class="block rounded-lg px-4 py-3 transition-colors hover:bg-amber-200/10 hover:text-amber-200"
+            >Skills</a
+          >
+        </li>
+        <li>
+          <a
+            href="#project"
+            class="block rounded-lg px-4 py-3 transition-colors hover:bg-amber-200/10 hover:text-amber-200"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="block rounded-lg px-4 py-3 transition-colors hover:bg-amber-200/10 hover:text-amber-200"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+    
+    <!-- Hero Section -->
+    <main
+      id="home"
+      class="overflow-hidden -18"
+    >
+      <section
+        class="mx-auto grid min-h-[calc(100vh-73px)] max-w-7xl items-center gap-12 px-5 py-12 sm:px-8 lg:grid-cols-2 lg:gap-10 lg:px-10 lg:py-8"
+      >
+        <!-- Left Content -->
+        <div class="min-w-0">
+          <div
+            class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-sm text-slate-300 badge-pulse"
+          >
+            <span class="relative flex size-2">
+              <span
+                class="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex size-2 rounded-full bg-emerald-400"
+              ></span>
+            </span>
+
+            Front-End Developer
+          </div>
+
+          <p class="mb-3 text-lg text-slate-300 sm:text-xl">Hello, I'm</p>
+
+          <h1
+            class="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl"
+          >
+            <span
+              id="typing-text"
+              class="typing-text bg-gradient-to-r from-[#f2c5a8] via-[#c9cbd0] to-[#79c7f2] bg-clip-text text-transparent"
+              >Omar Alm</span
+            >
+
+            <span class="typing-cursor" aria-hidden="true"></span>
+          </h1>
+
+          <p
+            class="mt-6 max-w-xl text-base leading-8 text-slate-400 sm:text-lg"
+          >
+            I build responsive, accessible, and user-friendly interfaces with
+            HTML, Tailwind CSS, and JavaScript. I enjoy breaking challenges down
+            and solving them through code.
+          </p>
+
+          <!-- Hero Buttons -->
+          <div class="mt-8 flex flex-wrap items-center gap-5 sm:gap-8">
+            <a
+              href="#project"
+              class="font-semibold transition-colors duration-300 hover:text-sky-300"
+            >
+              Explore my work
+            </a>
+
+            <a
+              href="#contact"
+              class="flex gap-2 justify-center items-center rounded-full border border-white/70 px-6 py-3 font-semibold transition-colors duration-300 hover:border-amber-200 hover:bg-amber-200 hover:text-slate-950"
+            >
+              Contact me
+              <span
+                ><img
+                  src="src/assets/icon/phone.svg"
+                  alt="phone-icon"
+                  class="size-5 animate-bounce"
+              /></span>
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div
+            class="mt-8 flex flex-wrap items-center gap-6 text-sm text-slate-400 sm:gap-8"
+          >
+            <span>Find me online</span>
+
+            <a
+              href="https://github.com/omarmalm2006-arch"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="transition-colors duration-300 hover:text-amber-200"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://linkedin.com/in/omar-alm-478769388/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="transition-colors duration-300 hover:text-amber-200"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Profile Card -->
+        <div class="relative mx-auto w-full max-w-md py-8">
+          <!-- Rotating Orbits -->
+          <div
+            class="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[115%] w-[115%] -translate-x-1/2 -translate-y-1/2"
+          >
+            <div
+              class="orbit-one absolute inset-0 rounded-[50%] border border-sky-400/20"
+            ></div>
+            <div
+              class="orbit-two absolute inset-0 rounded-[50%] border border-orange-300/20"
+            ></div>
+          </div>
+
+          <div
+            class="relative z-10 rounded-4xl border border-white/10 bg-linear-to-br from-[#252c36] via-[#1b1e23] to-[#151515] p-5 shadow-2xl sm:p-7"
+          >
+            <div class="flex items-center justify-between">
+              <p class="text-xs tracking-[0.25em] text-slate-400 sm:text-sm">
+                MY CARD
+              </p>
+            </div>
+
+            <div
+              class="mx-auto mt-8 flex size-32 items-center justify-center overflow-hidden rounded-full border border-white/70 bg-slate-800 sm:size-36"
+            >
+              <img
+                src="/src/assets/img/profile.jpeg"
+                alt="Omar Mamdouh"
+                class="size-full object-cover"
+              />
+            </div>
+
+            <div class="mt-6 text-center">
+              <h2 class="text-2xl font-bold sm:text-3xl">Omar Alm</h2>
+              <p class="mt-2 text-sm text-slate-400 sm:text-base">
+                Front-End Developer
+              </p>
+            </div>
+
+            <div class="mt-8 grid grid-cols-3 gap-2 sm:gap-3">
+              <div
+                class="rounded-2xl bg-white/5 px-2 py-4 text-center transition-colors duration-300 hover:bg-white/10"
+              >
+                <h3 class="text-lg font-bold sm:text-xl">Web</h3>
+                <p class="mt-1 text-xs text-slate-400 sm:text-sm">
+                  Development
+                </p>
+              </div>
+
+              <div
+                class="rounded-2xl bg-white/5 px-2 py-4 text-center transition-colors duration-300 hover:bg-white/10"
+              >
+                <h3 class="text-lg font-bold sm:text-xl">UI</h3>
+                <p class="mt-1 text-xs text-slate-400 sm:text-sm">Responsive</p>
+              </div>
+
+              <div
+                class="rounded-2xl bg-white/5 px-2 py-4 text-center transition-colors duration-300 hover:bg-white/10"
+              >
+                <h3 class="text-lg font-bold sm:text-xl">Code</h3>
+                <p class="mt-1 text-xs text-slate-400 sm:text-sm">Learning</p>
+              </div>
+            </div>
+
+            <div
+              class="mt-6 flex items-center gap-3 rounded-2xl border border-white/70 p-3 sm:p-4"
+            >
+              <div class="min-w-0">
+                <p class="text-sm font-semibold sm:text-base">
+                  Open to opportunities
+                </p>
+                <p class="mt-1 text-xs text-slate-400 sm:text-sm">
+                  Internships · Collaboration · Projects
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="float-build absolute -right-2 top-16 z-20 rounded-full border border-white/20 bg-[#171717] px-4 py-3 text-sm text-orange-200 shadow-lg sm:-right-5"
+          >
+            Build
+          </div>
+
+          <!-- Learn -->
+          <div
+            class="float-learn absolute -left-2 top-[55%] z-20 rounded-full border border-white/20 bg-[#171717] px-4 py-3 text-sm text-orange-200 shadow-lg sm:-left-5"
+          >
+            Learn
+          </div>
+
+          <!-- Repeat -->
+          <div
+            class="float-repeat absolute -bottom-1 right-3 z-20 rounded-full border border-white/20 bg-[#171717] px-4 py-3 text-sm text-orange-200 shadow-lg sm:-right-5"
+          >
+            Repeat
+          </div>
+        </div>
+      </section>
+      <!-- information about me -->
+
+<section class="mx-auto grid min-h-[calc(100vh-73px)] max-w-7xl grid-cols-1 items-start gap-10 px-5 py-8 md:grid-cols-2 md:gap-8 lg:gap-12 lg:px-8" id="about">
+
+  <!-- Left Side -->
+  <div class="min-w-0">
+
+    <p class="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-orange-200">
+      A little about me
+    </p>
+
+    <h2 class="mb-5 text-3xl font-extrabold leading-tight text-gray-100 sm:text-4xl lg:text-5xl">
+      Turning ideas into
+      <span class="text-orange-200">web solutions.</span>
+    </h2>
+
+    <p class="mb-4 text-sm leading-6 text-slate-400 sm:text-base sm:leading-[1.7]">
+      I'm Omar Mamdouh Alm, a Front-End Developer focused on building
+      responsive, accessible, and user-friendly web interfaces. I use HTML,
+      Tailwind CSS, and JavaScript to turn ideas into clear, functional
+      experiences.
+    </p>
+
+    <p class="mb-6 text-sm leading-6 text-slate-400 sm:text-base sm:leading-[1.7]">
+      I'm studying in the Faculty of Science, Computer Science Department,
+      with a GPA of 3.25. I enjoy problem solving, learning through projects,
+      and improving the way I build interfaces.
+    </p>
+
+    <ul class="flex flex-col gap-5 mt-4 text-sm text-gray-200">
+
+      <!-- Links -->
+      <li class="flex flex-wrap items-center gap-4">
+        <span class="shrink-0">Links</span>
+
+        <div class="flex items-center gap-4">
+          <a href="https://www.facebook.com/omar.alm.37819"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Facebook">
+            <img src="src/assets/icon/facebook.svg"
+                 alt="" class="h-5 w-5 animate-bounce">
+          </a>
+
+          <a href="https://www.instagram.com/omaralm22"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Instagram">
+            <img src="src/assets/icon/instagram.svg"
+                 alt="" class="h-5 w-5 animate-bounce">
+          </a>
+
+          <a href="https://www.linkedin.com/in/omar-alm-478769388/"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="LinkedIn">
+            <img src="src/assets/icon/linkedin.svg"
+                 alt="" class="h-5 w-5 animate-bounce">
+          </a>
+
+          <a href="https://github.com/omarmalm2006-arch"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="GitHub">
+            <img src="src/assets/icon/github.svg"
+                 alt="" class="h-5 w-5 animate-bounce">
+          </a>
+        </div>
+      </li>
+
+      <!-- University -->
+      <li class="flex items-start gap-3">
+        <img src="src/assets/icon/graduation-cap.svg"
+             alt="" class="mt-0.5 h-5 w-5 shrink-0">
+        <span>Faculty of Science, Computer Science Department</span>
+      </li>
+
+      <!-- Location -->
+      <li class="flex items-center gap-3">
+        <img src="src/assets/icon/map-pin.svg"
+             alt="" class="h-5 w-5 shrink-0 animate-bounce">
+        <span>Seindion / Qaliop, Egypt</span>
+      </li>
+
+    </ul>
+  </div>
+
+  <!-- Right Side: Cards -->
+  <div class="grid min-w-0 grid-cols-1 gap-4 sm:grid-cols-2 mt-10">
+
+<!--     
+    <div class="group min-w-0 rounded-2xl border border-[#263746] bg-gradient-to-br from-[#101820] to-[#0b1016] p-5 transition-colors duration-300 hover:border-orange-200/60">
+
+      <span class="mb-5 inline-flex rounded-xl bg-[#20252b] px-3 py-2 text-xs font-bold text-orange-200">
+        3.25
+      </span>
+
+      <h3 class="mb-2 font-bold text-gray-100">GPA</h3>
+
+      <p class="text-sm leading-6 text-slate-400">
+        Faculty of Science · Computer Science Department
+      </p>
+    </div> -->
+
+    <!-- Learning -->
+    <div class="group min-w-0 rounded-2xl border border-[#263746] bg-gradient-to-br from-[#101820] to-[#0b1016] p-5 transition-colors duration-300 hover:border-orange-200/60">
+
+      <span class="mb-5 inline-flex rounded-xl bg-[#20252b] px-3 py-2 text-xs font-bold text-orange-200">
+        01
+      </span>
+
+      <h3 class="mb-2 font-bold text-gray-100">Learn by building</h3>
+
+      <p class="text-sm leading-6 text-slate-400">
+        Practice new concepts by applying them to real projects.
+      </p>
+    </div>
+
+    <!-- Users -->
+    <div class="group min-w-0 rounded-2xl border border-[#263746] bg-gradient-to-br from-[#101820] to-[#0b1016] p-5 transition-colors duration-300 hover:border-orange-200/60">
+
+      <span class="mb-5 inline-flex rounded-xl bg-[#20252b] px-3 py-2 text-xs font-bold text-orange-200">
+        02
+      </span>
+
+      <h3 class="mb-2 font-bold text-gray-100">Focus on users</h3>
+
+      <p class="text-sm leading-6 text-slate-400">
+        Create layouts that are clear, accessible, and responsive.
+      </p>
+    </div>
+
+    <!-- Improvement -->
+    <div class="group min-w-0 rounded-2xl border border-[#263746] bg-gradient-to-br from-[#101820] to-[#0b1016] p-5 transition-colors duration-300 hover:border-orange-200/60">
+
+      <span class="mb-5 inline-flex rounded-xl bg-[#20252b] px-3 py-2 text-xs font-bold text-orange-200">
+        03
+      </span>
+
+      <h3 class="mb-2 font-bold text-gray-100">Keep improving</h3>
+
+      <p class="text-sm leading-6 text-slate-400">
+        Build stronger foundations in front-end and back-end development.
+      </p>
+    </div>
+
+    <!-- Problem Solving -->
+    <div class="group min-w-0 rounded-2xl border border-[#263746] bg-gradient-to-br from-[#101820] to-[#0b1016] p-5 transition-colors duration-300 hover:border-orange-200/60">
+
+      <span class="mb-5 inline-flex rounded-xl bg-[#20252b] px-3 py-2 text-xs font-bold text-orange-200">
+        04
+      </span>
+
+      <h3 class="mb-2 font-bold text-gray-100">Solve problems</h3>
+
+      <p class="text-sm leading-6 text-slate-400">
+        Use logic and structured thinking to work through challenges.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

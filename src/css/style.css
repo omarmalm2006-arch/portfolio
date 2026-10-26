@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+.orbit-one {
+  transform: rotate(-25deg) scaleX(0.8);
+  animation: orbit-one 8s linear infinite;
+}
+
+.orbit-two {
+  transform: rotate(35deg) scaleX(0.8);
+  animation: orbit-two 12s linear infinite;
+}
+
+@keyframes orbit-one {
+  from {
+    transform: rotate(-25deg) scaleX(0.8);
+  }
+
+  to {
+    transform: rotate(335deg) scaleX(0.8);
+  }
+}
+
+@keyframes orbit-two {
+  from {
+    transform: rotate(35deg) scaleX(0.8);
+  }
+
+  to {
+    transform: rotate(395deg) scaleX(0.8);
+  }
+}
+
+
+.float-build {
+  animation: float-build 3s ease-in-out infinite;
+}
+
+.float-learn {
+  animation: float-learn 3.5s ease-in-out infinite;
+}
+
+.float-repeat {
+  animation: float-repeat 4s ease-in-out infinite;
+}
+
+@keyframes float-build {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float-learn {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes float-repeat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-build,
+  .float-learn,
+  .float-repeat {
+    animation: none;
+  }
+}
+
+.typing-text {
+  display: inline;
+  overflow-wrap: anywhere;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.85em;
+  margin-left: 5px;
+  vertical-align: -0.05em;
+  background-color: #79c7f2;
+  animation: cursor-blink 0.8s steps(2, start) infinite;
+}
+
+@keyframes cursor-blink {
+  to {
+    visibility: hidden;
+  }
+}
