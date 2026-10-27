@@ -1,5 +1,6 @@
 
 import '../css/style.css';
+import './project.js';
 
 const menuToggle = document.querySelector("#menu-toggle");
 const mobileMenu = document.querySelector("#mobile-menu");
