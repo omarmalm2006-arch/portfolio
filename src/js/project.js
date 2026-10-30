@@ -1,9 +1,8 @@
-
 const projects = [
   {
     id: 1,
     name: "Music Explorer",
-    image: "/src/assets/img/music.png",
+    image: "/img/music.png", 
     description:
       "A music discovery web app with search, playlists and a clean modern interface.",
     technologies: ["HTML", "CSS", "JavaScript"],
@@ -13,25 +12,23 @@ const projects = [
   {
     id: 2,
     name: "Mood Adjustment",
-    image: "src/assets/img/mood-adjustment.png",
+    image: "/img/mood-adjustment.png", 
     description:
       "A web project designed to provide an interactive user experience.",
     technologies: ["HTML", "Tailwind", "JavaScript"],
     demo: "https://omarmalm2006-arch.github.io/Mood-adjustment/",
     github: "https://github.com/omarmalm2006-arch/Mood-adjustment",
   },
-  
-{
-  id: 3,
-  name: "Imposter",
-  image: "src/assets/img/imposter.png",
-  description:
-    "Built an interactive multiplayer party game while practicing DOM manipulation, event handling, arrays and objects, game logic, and dynamic UI updates using JavaScript. Also improved my skills in responsive design and organizing code into reusable functions.",
-  technologies: ["HTML", "CSS", "JavaScript"],
-  demo: "https://imposter-ecru-psi.vercel.app/",
-  github: "https://github.com/omarmalm2006-arch/imposter",
-},
-
+  {
+    id: 3,
+    name: "Imposter",
+    image: "/img/imposter.png",
+    description:
+      "Built an interactive multiplayer party game while practicing DOM manipulation, event handling, arrays and objects, game logic, and dynamic UI updates using JavaScript. Also improved my skills in responsive design and organizing code into reusable functions.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    demo: "https://imposter-ecru-psi.vercel.app/",
+    github: "https://github.com/omarmalm2006-arch/imposter",
+  },
 ];
 
 // Get the container
@@ -104,5 +101,4 @@ function displayProjects() {
     .join("");
 }
 
-// Display projects on page load
 displayProjects();
